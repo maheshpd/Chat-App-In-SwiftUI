@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,14 @@
 		B5646AA624E8F568005EEFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5646AA524E8F568005EEFA8 /* Assets.xcassets */; };
 		B5646AA924E8F568005EEFA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5646AA824E8F568005EEFA8 /* Preview Assets.xcassets */; };
 		B5646AAC24E8F568005EEFA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5646AAA24E8F568005EEFA8 /* LaunchScreen.storyboard */; };
+		B5646AB424E8F684005EEFA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5646AB324E8F684005EEFA8 /* GoogleService-Info.plist */; };
+		C57C984DE2E2231B5F159B77 /* Pods_Chat_App_In_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71134D05FB85875F8031839E /* Pods_Chat_App_In_SwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71134D05FB85875F8031839E /* Pods_Chat_App_In_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_App_In_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75804337D8DBC79A8BBB58CD /* Pods-Chat App In SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat App In SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Chat App In SwiftUI/Pods-Chat App In SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		B06A8FC60900B9564CF9C3E2 /* Pods-Chat App In SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat App In SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Chat App In SwiftUI/Pods-Chat App In SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		B5646A9C24E8F565005EEFA8 /* Chat App In SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat App In SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5646A9F24E8F565005EEFA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5646AA124E8F565005EEFA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		B5646AA824E8F568005EEFA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5646AAB24E8F568005EEFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5646AAD24E8F568005EEFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5646AB324E8F684005EEFA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57C984DE2E2231B5F159B77 /* Pods_Chat_App_In_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1329BB7CFB389C297CA45FC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71134D05FB85875F8031839E /* Pods_Chat_App_In_SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5646A9324E8F565005EEFA8 = {
 			isa = PBXGroup;
 			children = (
+				B5646AB324E8F684005EEFA8 /* GoogleService-Info.plist */,
 				B5646A9E24E8F565005EEFA8 /* Chat App In SwiftUI */,
 				B5646A9D24E8F565005EEFA8 /* Products */,
+				ED43700B8104EEE80D19C644 /* Pods */,
+				1329BB7CFB389C297CA45FC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +93,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		ED43700B8104EEE80D19C644 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B06A8FC60900B9564CF9C3E2 /* Pods-Chat App In SwiftUI.debug.xcconfig */,
+				75804337D8DBC79A8BBB58CD /* Pods-Chat App In SwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5646AB024E8F568005EEFA8 /* Build configuration list for PBXNativeTarget "Chat App In SwiftUI" */;
 			buildPhases = (
+				E096D5A2636DAEB7D13234DA /* [CP] Check Pods Manifest.lock */,
 				B5646A9824E8F565005EEFA8 /* Sources */,
 				B5646A9924E8F565005EEFA8 /* Frameworks */,
 				B5646A9A24E8F565005EEFA8 /* Resources */,
+				DB3A914C6820282D522973F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5646AB424E8F684005EEFA8 /* GoogleService-Info.plist in Resources */,
 				B5646AAC24E8F568005EEFA8 /* LaunchScreen.storyboard in Resources */,
 				B5646AA924E8F568005EEFA8 /* Preview Assets.xcassets in Resources */,
 				B5646AA624E8F568005EEFA8 /* Assets.xcassets in Resources */,
@@ -140,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB3A914C6820282D522973F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chat App In SwiftUI/Pods-Chat App In SwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chat App In SwiftUI/Pods-Chat App In SwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chat App In SwiftUI/Pods-Chat App In SwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E096D5A2636DAEB7D13234DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chat App In SwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5646A9824E8F565005EEFA8 /* Sources */ = {
@@ -282,6 +354,7 @@
 		};
 		B5646AB124E8F568005EEFA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B06A8FC60900B9564CF9C3E2 /* Pods-Chat App In SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +374,7 @@
 		};
 		B5646AB224E8F568005EEFA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75804337D8DBC79A8BBB58CD /* Pods-Chat App In SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
