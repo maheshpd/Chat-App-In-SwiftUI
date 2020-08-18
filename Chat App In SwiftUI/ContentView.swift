@@ -25,22 +25,25 @@ struct ContentView: View {
                     
                     TextField("Name", text: $name).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
                     
-                    NavigationLink(destination: MsgPage(name: self.name)){
-                        HStack {
-                            Text("Join")
-                            Image(systemName: "arrow.right.circle.fill")
-                                .resizable().frame(width: 20, height: 20)
-                        }
-                    }.frame(width: 100, height: 54)
-                        .background(Color.orange)
-                        .foregroundColor(.white)
-                    .cornerRadius(27)
-                        .padding(.bottom, 15)
+                    if self.name != "" {
+                        NavigationLink(destination: MsgPage(name: self.name)){
+                            HStack {
+                                Text("Join")
+                                Image(systemName: "arrow.right.circle.fill")
+                                    .resizable().frame(width: 20, height: 20)
+                            }
+                        }.frame(width: 100, height: 54)
+                            .background(Color.orange)
+                            .foregroundColor(.white)
+                        .cornerRadius(27)
+                            .padding(.bottom, 15)
+                    }
                 }.background(Color.white)
                 .cornerRadius(20)
             .padding()
             }.edgesIgnoringSafeArea(.all)
         }
+        .animation(.default)
     }
 }
 
@@ -59,8 +62,15 @@ struct MsgPage : View {
     var body: some View {
         VStack{
             List(msg.msgs){i in
-                Text(i.msg)
-            }.navigationBarTitle("Chats",displayMode: .large)
+                
+                if i.name == self.name{
+                    MsgRow(msg: i.msg, myMsg: true, user: i.name)
+                } else {
+                    MsgRow(msg: i.msg, myMsg: false, user: i.name)
+                }
+                
+                
+            }.navigationBarTitle("Chats",displayMode: .inline)
             
             HStack {
                 
@@ -130,3 +140,34 @@ struct datatype : Identifiable {
     var msg : String
     
 }
+
+struct MsgRow : View {
+    var msg = ""
+    var myMsg = false
+    var user = ""
+    var body: some View {
+        HStack {
+            
+            if myMsg {
+                Spacer()
+                
+                Text(msg).padding(8).background(Color.red).cornerRadius(6).foregroundColor(.white)
+            } else {
+                
+                VStack(alignment: .leading){
+                     Text(msg).padding(8).background(Color.green).cornerRadius(6).foregroundColor(.white)
+                    Text(user)
+                }
+                
+               
+                Spacer()
+            }
+            
+        }
+    }
+}
+
+//if u change user name then new user will be created....
+//this is like global chat....
+//you can strict on user per phone by using user defaults....
+//we can further classify users....
